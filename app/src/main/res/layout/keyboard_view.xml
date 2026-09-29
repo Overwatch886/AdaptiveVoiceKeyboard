@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/keyboard_bg"
+    android:padding="8dp">
+
+    <!-- Status bar showing what's happening -->
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tap_mic"
+        android:textColor="@color/status_text"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:paddingBottom="4dp" />
+
+    <!-- Transcription preview — shows raw Groq output before correction -->
+    <TextView
+        android:id="@+id/transcriptionPreview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E8F0FE"
+        android:padding="8dp"
+        android:textColor="@color/key_text"
+        android:textSize="13sp"
+        android:visibility="gone"
+        android:hint="Transcription will appear here…"
+        android:minHeight="36dp" />
+
+    <!-- Main action row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp">
+
+        <!-- Backspace -->
+        <Button
+            android:id="@+id/btnBackspace"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="⌫"
+            android:textSize="18sp"
+            android:layout_marginEnd="4dp" />
+
+        <!-- Big mic button -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnMic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:src="@android:drawable/ic_btn_speak_now"
+            android:backgroundTint="@color/mic_idle"
+            android:contentDescription="Record voice" />
+
+        <!-- Space -->
+        <Button
+            android:id="@+id/btnSpace"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="Space"
+            android:textSize="13sp"
+            android:layout_marginStart="4dp" />
+
+    </LinearLayout>
+
+    <!-- Second row: Enter, comma, period, settings -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingBottom="4dp">
+
+        <Button
+            android:id="@+id/btnComma"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="," />
+
+        <Button
+            android:id="@+id/btnPeriod"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="." />
+
+        <Button
+            android:id="@+id/btnEnter"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="2"
+            android:text="↵ Enter" />
+
+        <Button
+            android:id="@+id/btnSettings"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="⚙" />
+
+    </LinearLayout>
+
+</LinearLayout>

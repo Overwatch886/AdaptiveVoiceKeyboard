@@ -1,0 +1,4 @@
+-keep class com.adaptivevoice.keyboard.** { *; }
+-keep class com.google.gson.** { *; }
+-keepattributes Signature
+-keepattributes *Annotation*

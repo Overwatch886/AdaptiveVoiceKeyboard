@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Adaptive Voice Keyboard</string>
+    <string name="keyboard_name">Adaptive Voice</string>
+    <string name="settings_title">Keyboard Settings</string>
+    <string name="groq_api_key_title">Groq API Key</string>
+    <string name="groq_api_key_summary">Required for voice transcription</string>
+    <string name="gemini_api_key_title">Gemini API Key</string>
+    <string name="gemini_api_key_summary">Required for smart correction</string>
+    <string name="correction_count">Corrections learned: %d</string>
+    <string name="clear_corrections">Clear all learned corrections</string>
+    <string name="enable_keyboard_prompt">Tap here to enable the keyboard in Android Settings</string>
+    <string name="recording">Listening…</string>
+    <string name="processing">Processing…</string>
+    <string name="correcting">Applying your patterns…</string>
+    <string name="tap_mic">Tap mic to speak</string>
+</resources>
